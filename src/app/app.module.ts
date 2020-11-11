@@ -12,6 +12,14 @@ import { SpecialsComponent } from './specials/specials.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { FooterComponent } from './footer/footer.component';
 import { WeekComponent } from './week/week.component';
+import { ClothesSectionComponent } from './clothes-section/clothes-section.component';
+import { PhonesSectionComponent } from './phones-section/phones-section.component';
+import { JewellerySectionComponent } from './jewellery-section/jewellery-section.component';
+import { PcSectionComponent } from './pc-section/pc-section.component';
+import { WatchSectionComponent } from './watch-section/watch-section.component';
+import { ShoesSectionComponent } from './shoes-section/shoes-section.component';
+import { BabySectionComponent } from './baby-section/baby-section.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +30,15 @@ import { WeekComponent } from './week/week.component';
     SpecialsComponent,
     NewsletterComponent,
     FooterComponent,
-    WeekComponent
+    WeekComponent,
+    ClothesSectionComponent,
+    PhonesSectionComponent,
+    JewellerySectionComponent,
+    PcSectionComponent,
+    WatchSectionComponent,
+    ShoesSectionComponent,
+    BabySectionComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
