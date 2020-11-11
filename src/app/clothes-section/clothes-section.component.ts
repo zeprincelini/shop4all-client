@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clothes-section.component.css']
 })
 export class ClothesSectionComponent implements OnInit {
-
+links = ["male", "female"];
+activeLink = this.links[0];
   constructor() { }
 
   ngOnInit() {

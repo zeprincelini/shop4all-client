@@ -20,6 +20,8 @@ import { WatchSectionComponent } from './watch-section/watch-section.component';
 import { ShoesSectionComponent } from './shoes-section/shoes-section.component';
 import { BabySectionComponent } from './baby-section/baby-section.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { ClothMaleComponent } from './cloth-male/cloth-male.component';
+import { ClothFemaleComponent } from './cloth-female/cloth-female.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { CarouselComponent } from './carousel/carousel.component';
     WatchSectionComponent,
     ShoesSectionComponent,
     BabySectionComponent,
-    CarouselComponent
+    CarouselComponent,
+    ClothMaleComponent,
+    ClothFemaleComponent
   ],
   imports: [
     BrowserModule,
