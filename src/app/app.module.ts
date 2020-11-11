@@ -11,6 +11,7 @@ import { ProductsComponent } from './products/products.component';
 import { SpecialsComponent } from './specials/specials.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { FooterComponent } from './footer/footer.component';
+import { WeekComponent } from './week/week.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     ProductsComponent,
     SpecialsComponent,
     NewsletterComponent,
-    FooterComponent
+    FooterComponent,
+    WeekComponent
   ],
   imports: [
     BrowserModule,
