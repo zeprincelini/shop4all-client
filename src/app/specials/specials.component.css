@@ -19,8 +19,14 @@
  ::ng-deep.mat-tab-label{
      min-width: 25% !important;
  }
+ mat-card:hover{
+    cursor: pointer;
+ }
  mat-card-image{
     margin: 0px;
+ }
+ button{
+     width: 100%;
  }
  .rate{
      display: flex;

@@ -5,3 +5,21 @@
 .nav div span{
     margin: 10px;
 }
+.mat-input-element{
+    background-color: #ffffff;
+    color: #3F51B5;
+}
+a{
+    color: #ffffff;
+    font-size: 17px;
+}
+.cat:hover{
+    cursor: pointer;
+}
+::ng-deep .mat-form-field-infix{
+    width: 400px !important;
+}
+
+.mat-icon{
+    vertical-align: middle;
+}

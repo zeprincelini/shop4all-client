@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cloth-male.component.css']
 })
 export class ClothMaleComponent implements OnInit {
-
+hold = 10;
   constructor() { }
 
   ngOnInit() {

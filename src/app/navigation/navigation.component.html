@@ -36,15 +36,33 @@
 
 <mat-toolbar color="primary" class="nav">
   <div class="brand mat-display-1">Shop4all</div>
-  <div>
-    <span>Home</span>
-    <span>clothes</span>
-    <span>cart</span>
+  <div class="search">
     <span>
       <mat-form-field>
-        <mat-label>search</mat-label>
-        <input matInput>
+        <input matInput type="text" placeholder="Search">
+        <button mat-button matSuffix mat-icon-button>
+          <mat-icon>search</mat-icon>
+        </button>
       </mat-form-field>
     </span>
+  </div>
+  <div>
+    <span><a routerLink ="/">Home</a></span>
+    <span class="cat"><a [matMenuTriggerFor] = "menuItems">Categories</a></span>
+      <mat-menu #menuItems= "matMenu">
+        <button mat-menu-item routerLink= "/clothes">Clothes</button>
+        <button mat-menu-item>Watches</button>
+        <button mat-menu-item>Jewellery</button>
+        <button mat-menu-item>Pc</button>
+        <button mat-menu-item>Phones</button>
+        <button mat-menu-item>Shoes</button>
+        <button mat-menu-item>Baby Items</button>
+      </mat-menu>
+    <span><a routerLink ="/about">About Us</a></span>
+    <span class="cat acc"><mat-icon [matMenuTriggerFor] = "account">account_circle</mat-icon></span>
+    <mat-menu #account= "matMenu">
+      <button mat-menu-item (click) = "openSignUp()">Sign Up</button>
+      <button mat-menu-item (click) = "openSignIn()">Sign In</button>
+    </mat-menu>
   </div>
 </mat-toolbar>

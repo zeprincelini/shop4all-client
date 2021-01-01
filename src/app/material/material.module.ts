@@ -10,6 +10,8 @@ import {MatButtonModule,
         MatGridListModule,
         MatTabsModule,
         MatCardModule,
+        MatMenuModule,
+        MatDialogModule,
         MatToolbarModule} from '@angular/material';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatDividerModule} from '@angular/material/divider'
@@ -28,8 +30,9 @@ const material = [
   MatGridListModule,
   MatTabsModule,
   MatCardModule,
-  MatDividerModule
-
+  MatDividerModule,
+  MatMenuModule,
+  MatDialogModule
 ];
 
 @NgModule({

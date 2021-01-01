@@ -22,6 +22,20 @@ import { BabySectionComponent } from './baby-section/baby-section.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ClothMaleComponent } from './cloth-male/cloth-male.component';
 import { ClothFemaleComponent } from './cloth-female/cloth-female.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { WatchMaleComponent } from './watch-male/watch-male.component';
+import { WatchFemaleComponent } from './watch-female/watch-female.component';
+import { ShoesFemaleComponent } from './shoes-female/shoes-female.component';
+import { ShoesMaleComponent } from './shoes-male/shoes-male.component';
+import { JewelleryMaleComponent } from './jewellery-male/jewellery-male.component';
+import { JewelleryFemaleComponent } from './jewellery-female/jewellery-female.component';
+import { BabyFemaleComponent } from './baby-female/baby-female.component';
+import { BabyMaleComponent } from './baby-male/baby-male.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { MainContentComponent } from './main-content/main-content.component';
+import { AddComponent } from './add/add.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +56,21 @@ import { ClothFemaleComponent } from './cloth-female/cloth-female.component';
     BabySectionComponent,
     CarouselComponent,
     ClothMaleComponent,
-    ClothFemaleComponent
+    ClothFemaleComponent,
+    SignUpComponent,
+    WatchMaleComponent,
+    WatchFemaleComponent,
+    ShoesFemaleComponent,
+    ShoesMaleComponent,
+    JewelleryMaleComponent,
+    JewelleryFemaleComponent,
+    BabyFemaleComponent,
+    BabyMaleComponent,
+    SignInComponent,
+    AdminDashboardComponent,
+    MainContentComponent,
+    AddComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
