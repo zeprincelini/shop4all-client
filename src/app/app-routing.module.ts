@@ -30,6 +30,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AddComponent } from './add/add.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {path:"", component: MainContentComponent, children: [
@@ -57,7 +59,10 @@ const routes: Routes = [
       {path: "female", component: BabyFemaleComponent}
     ]}
   ]},
-  {path: "admin", component: AdminDashboardComponent},
+  {path: "admin", component: AdminDashboardComponent, children: [
+    {path: "", component: DashboardComponent},
+    {path: "add", component: AddComponent}
+  ]},
   {path:"signin", component:SignInComponent},
   {path: "signup", component: SignUpComponent},
 ];
