@@ -36,6 +36,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { MainContentComponent } from './main-content/main-content.component';
 import { AddComponent } from './add/add.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FileuploadDirective } from './fileupload.directive';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AdminDashboardComponent,
     MainContentComponent,
     AddComponent,
-    DashboardComponent
+    DashboardComponent,
+    FileuploadDirective
   ],
   imports: [
     BrowserModule,
