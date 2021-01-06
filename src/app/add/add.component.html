@@ -1,0 +1,70 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+     <div class="matTab">
+      <mat-tab-group>
+        <mat-tab label="Clothes"> 
+            <div class="card">
+              <div class="card-header">Add Clothes</div>
+              <div class="card-body">
+                <form action="">
+                  <mat-form-field appearance="standard">
+                    <input matInput placeholder="Name" name="cloth">
+                  </mat-form-field>
+                  <mat-form-field appearance="standard">
+                    <mat-label>Gender</mat-label>
+                    <mat-select>
+                      <mat-option value="male">Male</mat-option>
+                      <mat-option value="female">Female</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <mat-form-field appearance="standard">
+                    <input matInput placeholder="Price" type="number" name="price">
+                  </mat-form-field>
+                  <label id="rating">Rating</label>
+                  <mat-radio-group aria-labelledby = "rating" class="radio">
+                    <mat-radio-button value="1" class="mt-1 mb-1">
+                      1
+                    </mat-radio-button>
+                    <mat-radio-button value="2" class="mt-1 mb-1">
+                      2
+                    </mat-radio-button>
+                    <mat-radio-button value="3" class="mt-1 mb-1">
+                      3
+                    </mat-radio-button>
+                    <mat-radio-button value="4" class="mt-1 mb-1">
+                      4
+                    </mat-radio-button>
+                    <mat-radio-button value="5" class="mt-1 mb-1">
+                      5
+                    </mat-radio-button>
+                  </mat-radio-group>
+                  
+                    <div class="fileupload" appFileupload (onFileDrop) = "uploadFile($event)">
+                      <input hidden type="file" id="file" #fileInput (change)="uploadFile($event.target.files)">
+                      <label for="file">Select File to Upload</label>
+                    </div>
+                    <div  class="files-list" *ngFor="let file of files;let i= index">
+                      <p> {{ file }} </p>
+                      <button class="delete-file" (click)="deleteAttachment(i)">
+                        <mat-icon>delete</mat-icon>
+                      </button>
+                   </div>
+                  
+                  <div class="d-flex justify-content-center mt-4">
+                    <button mat-raised-button type="submit" color ="primary" class="button">
+                      Upload
+                    </button>
+                  </div>
+                  
+                </form>
+              </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Second"> Content 2 </mat-tab>
+        <mat-tab label="Third"> Content 3 </mat-tab>
+      </mat-tab-group>
+     </div>
+    </div>
+  </div>
+</div>

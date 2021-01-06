@@ -1,0 +1,30 @@
+.logo{
+    padding: 10px;
+}
+.title h4{
+    padding: 20px;
+    font-size: 24px;
+}
+
+.my-nav ul{
+    padding-left: 1px;
+}
+
+.my-nav ul li{
+    list-style: none;
+    width: 100%;
+    padding: 15px 30px 15px 30px;
+    font-size: 18px;
+    color: #3F51B5;
+}
+
+li:hover{
+    background-color: #3F51B5;
+    color: #ffffff !important;
+    cursor: pointer;
+}
+
+.active{
+    background-color: #3F51B5;
+    color: #ffffff !important;
+}
