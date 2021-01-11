@@ -1,4 +1,5 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add',
@@ -23,4 +24,7 @@ export class AddComponent implements OnInit {
     this.files.splice(index, 1)
   }
 
+  onSubmit(form: NgForm){
+    console.log(form.value.cloth);
+  }
 }

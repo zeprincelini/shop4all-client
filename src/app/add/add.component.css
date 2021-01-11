@@ -13,9 +13,10 @@ form .button{
 
 .fileupload{
     width: 90%;
-    height: 200px;
+    height: 150px;
     margin: 0 auto;
-    background-image: url('../../assets/vector/iconfinder_icon-ios7-cloud-upload-outline_211722.svg');
+    /* background-image: url('../../assets/vector/iconfinder_icon-ios7-cloud-upload-outline_211722.svg'); */
+    background-image: url('../../assets/vector/upload-gray.png');
     background-position: center;
     background-size: 64px 64px;
     background-repeat: no-repeat;
@@ -35,9 +36,9 @@ form .button{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px dashed red;
-    padding: 20px;
+    border-bottom: 1px dashed #3F51B5;
+    padding: 5px;
 }
-/* .delete-file{
-    
-} */
+.delete-file mat-icon{
+    color: #3F51B5;
+}

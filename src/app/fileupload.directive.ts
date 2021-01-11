@@ -5,33 +5,31 @@ import { Directive, EventEmitter, HostBinding, HostListener, Output } from '@ang
 })
 export class FileuploadDirective {
   @Output() onFileDrop = new EventEmitter<any>();
-  @HostBinding ('style.border') bd = '2px dotted blue';
-  @HostBinding ('style.opacity') op = 1;
+  @HostBinding ('style.border') bd = '2px dashed #808080';
+  @HostBinding ('style.background-image') bg = "url('../../assets/vector/upload-gray.png')"
 
   @HostListener ('dragover', ['$event']) onDragOver(evt){
     evt.preventDefault();
     evt.stopPropagation();
-    this.bd = '2px groove blue';
-    this.op = 0.8;
+    this.bd = '2px groove #3F51B5';
+    this.bg = "url('../../assets/vector/upload-pur.png')";
   }
 
   @HostListener ('dragleave', ['$event']) onDragLeave(evt){
     evt.preventDefault();
     evt.stopPropagation();
-    this.bd = '2px dotted blue';
-    this.op = 1;
+    this.bd = '2px dashed #808080';
+    this.bg = "url('../../assets/vector/upload-gray.png')";
   }
 
   @HostListener ('drop', ['$event']) onDrop(evt){
     evt.preventDefault();
     evt.stopPropagation();
-    this.bd = '3px groove blue';
-    this.op = 1;
+    this.bd = '2px groove #3F51B5';
+    this.bg = "url('../../assets/vector/upload-pur.png')";
     let files = evt.dataTransfer.files;
     console.log(files)
-    if(files > 0) {
-      this.onFileDrop.emit(files);
-    } 
+    this.onFileDrop.emit(files);
   }
 
   @HostListener ('click', ['$event']) onClick(evt){
