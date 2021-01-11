@@ -7,23 +7,23 @@
             <div class="card">
               <div class="card-header">Add Clothes</div>
               <div class="card-body">
-                <form action="" (ngSubmit) = "onSubmit()">
+                <form action="" enctype="multipart/form-data" (ngSubmit) = "onSubmit()" [formGroup] = "items">
                   <mat-form-field appearance="standard">
-                    <input matInput placeholder="Name" name="cloth" ngModel>
+                    <input matInput placeholder="Name" formControlName="cloth">
                   </mat-form-field>
                   <mat-form-field appearance="standard">
                     <mat-label>Gender</mat-label>
-                    <mat-select ngModel name = "gender">
-                      <mat-option value="male">Male</mat-option>
-                      <mat-option value="female">Female</mat-option>
+                    <mat-select formControlName="gender">
+                      <mat-option *ngFor = "let gender of gender" [value]='gender'>{{gender}}</mat-option>
+                      <!-- <mat-option value="female">Female</mat-option> -->
                     </mat-select>
                   </mat-form-field>
                   <mat-form-field appearance="standard">
-                    <input matInput placeholder="Price" type="number" name="price" ngModel>
+                    <input matInput placeholder="Price" type="number" formControlName="price">
                   </mat-form-field>
    
                     <div class="fileupload" appFileupload (onFileDrop) = "uploadFile($event)">
-                      <input hidden type="file" id="file" name ="img" #fileInput (change)="uploadFile($event.target.files)" ngModel>
+                      <input hidden type="file" id="file" formControlName="file" #fileInput (change)="uploadFile($event.target.files)">
                       <!-- <label for="file">Select File to Upload</label> -->
                     </div>
                     <div  class="files-list" *ngFor="let file of files;let i= index">
