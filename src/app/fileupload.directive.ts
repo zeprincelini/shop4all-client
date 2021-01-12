@@ -28,7 +28,7 @@ export class FileuploadDirective {
     this.bd = '2px groove #3F51B5';
     this.bg = "url('../../assets/vector/upload-pur.png')";
     let files = evt.dataTransfer.files;
-    console.log(files)
+    // console.log(files)
     this.onFileDrop.emit(files);
   }
 

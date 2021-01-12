@@ -22,7 +22,7 @@ export class AddComponent implements OnInit {
     });
   }
   uploadFile(event) {
-    const myfile = (event.target as HTMLInputElement).files[0];
+    const myfile = event[0];
     this.items.patchValue({
       file: myfile
     });
@@ -32,7 +32,7 @@ export class AddComponent implements OnInit {
       const element = event[index];
       this.files.push(element.name)
     }  
-    ///console.log(this.files)
+    // console.log(this.files)
   }
   deleteAttachment(index) {
     this.files.splice(index, 1)

@@ -22,9 +22,9 @@
                     <input matInput placeholder="Price" type="number" formControlName="price">
                   </mat-form-field>
    
-                    <div class="fileupload" appFileupload (onFileDrop) = "uploadFile($event)">
-                      <input hidden type="file" id="file" formControlName="file" #fileInput (change)="uploadFile($event.target.files)">
-                      <!-- <label for="file">Select File to Upload</label> -->
+                    <div class="fileupload" appFileupload (onFileDrop) = "uploadFile($event)" (click) = "fileInput.click()">
+                      <input hidden type="file" #fileInput #fileInput (change)="uploadFile($event.target.files)">
+                    
                     </div>
                     <div  class="files-list" *ngFor="let file of files;let i= index">
                       <p class="align-middle"> {{ file }} </p>
