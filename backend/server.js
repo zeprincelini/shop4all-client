@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
+const api = require('./route/api');
+
 //create express app
 const app = express();
 
@@ -13,9 +15,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //root route
-app.get('/', (req, res) => {
-    res.send('welcome');
-});
+app.use('/api', api);
 
 //listen for requests
 app.listen(port, () => {

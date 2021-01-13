@@ -1,5 +1,11 @@
-// let express = require('express');
-// let app = express();
-// app.listen(3000, ()=>{
-    // console.log('running');
-// })
+const express = require('express');
+const multer = require('multer');
+const db = require('../db/db');
+const router = express.Router();
+
+
+router.post('/post-clothes', async (req, res) => {
+    //await db.query
+} );
+
+module.exports = router;
