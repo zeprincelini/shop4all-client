@@ -14,9 +14,10 @@ connection.connect((err) => {
 });
 
 //connection.query("insert into 'signin'('first_name', 'last_name', 'email', 'pass')values('ohayo', 'minna', 'oohayo@hmail.com', '123dhhsgd')");
-connection.query("select * from register", (error, result, fields) => {
-    if(error){
-        return console.log(error.message);
-    }
-    console.log(result);
-});
+// connection.query("select * from register", (error, result, fields) => {
+//     if(error){
+//         return console.log(error.message);
+//     }
+//     console.log(result);
+// });
+module.exports = connection;

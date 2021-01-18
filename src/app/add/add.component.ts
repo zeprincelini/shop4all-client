@@ -1,5 +1,6 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm } from '@angular/forms';
+import { HttpRequestService } from '../http-request.service';
 
 @Component({
   selector: 'app-add',
@@ -11,7 +12,7 @@ export class AddComponent implements OnInit {
   gender = ['male', 'female'];
   items: FormGroup;
   
-  constructor() {}
+  constructor(private httpRequest: HttpRequestService) {}
 
   ngOnInit() {
     this.items = new FormGroup({
@@ -39,6 +40,19 @@ export class AddComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
-    console.log(this.items);
+    let formData: any = new FormData();
+    formData.append("cloth", this.items.get("cloth").value);
+    formData.append("gender", this.items.get("gender").value);
+    formData.append("price", this.items.get('price').value);
+    formData.append('file', this.items.get('file').value);
+
+    this.httpRequest.postCloth(formData).subscribe(
+      res => {
+        console.log(res);
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 }
