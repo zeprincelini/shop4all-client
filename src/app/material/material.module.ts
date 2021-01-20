@@ -17,6 +17,7 @@ import {MatButtonModule,
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 const material = [
   MatButtonModule,
@@ -36,7 +37,8 @@ const material = [
   MatMenuModule,
   MatDialogModule,
   MatSelectModule,
-  MatRadioModule
+  MatRadioModule,
+  MatSnackBarModule
 ];
 
 @NgModule({

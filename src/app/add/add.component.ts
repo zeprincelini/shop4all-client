@@ -1,6 +1,7 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm } from '@angular/forms';
 import { HttpRequestService } from '../http-request.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-add',
@@ -11,8 +12,9 @@ export class AddComponent implements OnInit {
   files: any = [];
   gender = ['male', 'female'];
   items: FormGroup;
+  status = false;
   
-  constructor(private httpRequest: HttpRequestService) {}
+  constructor(private httpRequest: HttpRequestService, private snackbar: MatSnackBar) {}
 
   ngOnInit() {
     this.items = new FormGroup({
@@ -48,11 +50,22 @@ export class AddComponent implements OnInit {
 
     this.httpRequest.postCloth(formData).subscribe(
       res => {
+       this.snackbar.open("Item added successfully", "Close", {
+         duration: 3000
+       });
         console.log(res);
       },
       err => {
         console.log(err);
+        this.snackbar.open("Failed to add Item", "Close", {
+          duration: 3000
+        });
       }
     );
+  }
+  open(){
+    this.snackbar.open("Item added successfully", "Close", {
+      duration: 3000
+    });
   }
 }
