@@ -1,7 +1,8 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm } from '@angular/forms';
 import { HttpRequestService } from '../http-request.service';
-import {MatSnackBar} from '@angular/material/snack-bar';
+// import {MatSnackBar} from '@angular/material/snack-bar';
+// import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-add',
@@ -12,9 +13,11 @@ export class AddComponent implements OnInit {
   files: any = [];
   gender = ['male', 'female'];
   items: FormGroup;
-  status = false;
+  successStatus = false;
+  errorStatus = false;
+  data = {};
   
-  constructor(private httpRequest: HttpRequestService, private snackbar: MatSnackBar) {}
+  constructor(private httpRequest: HttpRequestService) {}
 
   ngOnInit() {
     this.items = new FormGroup({
@@ -41,7 +44,7 @@ export class AddComponent implements OnInit {
     this.files.splice(index, 1)
   }
 
-  onSubmit(form: NgForm){
+  onSubmit(){
     let formData: any = new FormData();
     formData.append("cloth", this.items.get("cloth").value);
     formData.append("gender", this.items.get("gender").value);
@@ -49,23 +52,16 @@ export class AddComponent implements OnInit {
     formData.append('file', this.items.get('file').value);
 
     this.httpRequest.postCloth(formData).subscribe(
-      res => {
-       this.snackbar.open("Item added successfully", "Close", {
-         duration: 3000
-       });
+      (res) => {
+        this.successStatus = true;
         console.log(res);
       },
-      err => {
+      (err) => {
+        this.errorStatus = true;
         console.log(err);
-        this.snackbar.open("Failed to add Item", "Close", {
-          duration: 3000
-        });
       }
     );
-  }
-  open(){
-    this.snackbar.open("Item added successfully", "Close", {
-      duration: 3000
-    });
+    this.items.reset();
+    this.files = [];
   }
 }

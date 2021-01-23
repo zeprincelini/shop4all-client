@@ -6,6 +6,18 @@
         <mat-tab label="Clothes"> 
             <div class="card">
               <div class="card-header">Add Clothes</div>
+              <!-- success alert start -->
+              <div class="alert alert-success" role="alert" *ngIf = "successStatus">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Success!</strong> Item added successfully!
+              </div>
+              <!-- success alert end -->
+              <!-- error alert start -->
+              <div class="alert alert-danger" role="alert" *ngIf = "errorStatus">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Error!</strong> Error adding Item!
+              </div>
+              <!-- error alert end -->
               <div class="card-body">
                 <form action="" enctype="multipart/form-data" (ngSubmit) = "onSubmit()" [formGroup] = "items">
                   <mat-form-field appearance="standard">

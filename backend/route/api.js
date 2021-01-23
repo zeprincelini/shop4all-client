@@ -26,8 +26,11 @@ router.post('/clothes', upload, async (req, res) => {
         await db.query(query, [req.body.cloth, req.body.gender, req.body.price, imgPath, date], (err, doc) => {
             if(err){
                 console.log("unable to insert: ", err);
+            }else{
+                console.log('added successful ');
+                res.send(doc);
             }
-            return ("insert successful ", doc);
+            
         })
     }catch(err){
         console.error(err);
