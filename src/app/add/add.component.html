@@ -1,118 +1,64 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-8 offset-md-2">
-     <div class="matTab">
-      <mat-tab-group>
-        <mat-tab label="Clothes"> 
-            <div class="card">
-              <div class="card-header">Add Clothes</div>
-              <!-- success alert start -->
-              <div class="alert alert-success" role="alert" *ngIf = "successStatus">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong>Success!</strong> Item added successfully!
+     <div class="mt-4">
+      <div class="card">
+        <div class="card-header">Add Product</div>
+        <!-- success alert start -->
+        <div class="alert alert-success" role="alert" *ngIf = "successStatus">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Success!</strong> Product added successfully!
+        </div>
+        <!-- success alert end -->
+        <!-- error alert start -->
+        <div class="alert alert-danger" role="alert" *ngIf = "errorStatus">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Error!</strong> Error adding Product!
+        </div>
+        <!-- error alert end -->
+        <div class="card-body">
+          <form action="" enctype="multipart/form-data" (ngSubmit) = "onSubmit()" [formGroup] = "items">
+            <mat-form-field appearance="standard">
+              <input matInput placeholder="Name" formControlName="name">
+            </mat-form-field>
+            <mat-form-field appearance="standard">
+              <mat-label>Gender</mat-label>
+              <mat-select formControlName="gender">
+                <mat-option *ngFor = "let gender of gender" [value]='gender'>{{gender}}</mat-option>
+                <!-- <mat-option value="female">Female</mat-option> -->
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="standard">
+              <mat-label>Product</mat-label>
+              <mat-select formControlName="product">
+                <mat-option *ngFor = "let products of product" [value]='products'>{{products}}</mat-option>
+                <!-- <mat-option value="female">Female</mat-option> -->
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="standard">
+              <input matInput placeholder="Price" type="number" formControlName="price">
+            </mat-form-field>
+
+              <div class="fileupload" appFileupload (onFileDrop) = "uploadFile($event)" (click) = "fileInput.click()">
+                <input hidden type="file" #fileInput #fileInput (change)="uploadFile($event.target.files)">
+              
               </div>
-              <!-- success alert end -->
-              <!-- error alert start -->
-              <div class="alert alert-danger" role="alert" *ngIf = "errorStatus">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong>Error!</strong> Error adding Item!
-              </div>
-              <!-- error alert end -->
-              <div class="card-body">
-                <form action="" enctype="multipart/form-data" (ngSubmit) = "onSubmit()" [formGroup] = "items">
-                  <mat-form-field appearance="standard">
-                    <input matInput placeholder="Name" formControlName="cloth">
-                  </mat-form-field>
-                  <mat-form-field appearance="standard">
-                    <mat-label>Gender</mat-label>
-                    <mat-select formControlName="gender">
-                      <mat-option *ngFor = "let gender of gender" [value]='gender'>{{gender}}</mat-option>
-                      <!-- <mat-option value="female">Female</mat-option> -->
-                    </mat-select>
-                  </mat-form-field>
-                  <mat-form-field appearance="standard">
-                    <input matInput placeholder="Price" type="number" formControlName="price">
-                  </mat-form-field>
-   
-                    <div class="fileupload" appFileupload (onFileDrop) = "uploadFile($event)" (click) = "fileInput.click()">
-                      <input hidden type="file" #fileInput #fileInput (change)="uploadFile($event.target.files)">
-                    
-                    </div>
-                    <div  class="files-list" *ngFor="let file of files;let i= index">
-                      <p class="align-middle"> {{ file }} </p>
-                      <button class="delete-file" (click)="deleteAttachment(i)" mat-icon-button color="primary">
-                        <mat-icon>delete</mat-icon>
-                      </button>
-                   </div>
-                  
-                  <div class="d-flex justify-content-center mt-4">
-                    <button mat-raised-button type="submit" color ="primary" class="button">
-                      Upload
-                    </button>
-                  </div>
-                  
-                </form>
-              </div>
+              <div  class="files-list" *ngFor="let file of files;let i= index">
+                <p class="align-middle"> {{ file }} </p>
+                <button class="delete-file" (click)="deleteAttachment(i)" mat-icon-button color="primary">
+                  <mat-icon>delete</mat-icon>
+                </button>
+             </div>
+            
+            <div class="d-flex justify-content-center mt-4">
+              <button mat-raised-button type="submit" color ="primary" class="button">
+                Upload
+              </button>
             </div>
-        </mat-tab>
-        <mat-tab label="Jewellery"> 
-          <div class="card">
-            <div class="card-header">Add Jewellery</div>
-            <!-- success alert start -->
-            <div class="alert alert-success" role="alert" *ngIf = "successStatus">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <strong>Success!</strong> Item added successfully!
-            </div>
-            <!-- success alert end -->
-            <!-- error alert start -->
-            <div class="alert alert-danger" role="alert" *ngIf = "errorStatus">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <strong>Error!</strong> Error adding Item!
-            </div>
-            <!-- error alert end -->
-            <div class="card-body">
-              <form action="" enctype="multipart/form-data" (ngSubmit) = "onSubmitJ()" [formGroup] = "items">
-                <mat-form-field appearance="standard">
-                  <input matInput placeholder="Name" formControlName="cloth">
-                </mat-form-field>
-                <mat-form-field appearance="standard">
-                  <mat-label>Gender</mat-label>
-                  <mat-select formControlName="gender">
-                    <mat-option *ngFor = "let gender of gender" [value]='gender'>{{gender}}</mat-option>
-                    <!-- <mat-option value="female">Female</mat-option> -->
-                  </mat-select>
-                </mat-form-field>
-                <mat-form-field appearance="standard">
-                  <input matInput placeholder="Price" type="number" formControlName="price">
-                </mat-form-field>
- 
-                  <div class="fileupload" appFileupload (onFileDrop) = "uploadFile($event)" (click) = "fileInput.click()">
-                    <input hidden type="file" #fileInput #fileInput (change)="uploadFile($event.target.files)">
-                  
-                  </div>
-                  <div  class="files-list" *ngFor="let file of files;let i= index">
-                    <p class="align-middle"> {{ file }} </p>
-                    <button class="delete-file" (click)="deleteAttachment(i)" mat-icon-button color="primary">
-                      <mat-icon>delete</mat-icon>
-                    </button>
-                 </div>
-                
-                <div class="d-flex justify-content-center mt-4">
-                  <button mat-raised-button type="submit" color ="primary" class="button">
-                    Upload
-                  </button>
-                </div>
-                
-              </form>
-            </div>
-          </div>
-        </mat-tab>
-        <mat-tab label="Mobile Phones"> Content 3 </mat-tab>
-        <mat-tab label="Shoes"> Content 3 </mat-tab>
-        <mat-tab label="Laptops"> Content 3 </mat-tab>
-        <mat-tab label="Watches"> Content 3 </mat-tab>
-        <mat-tab label="Baby Items"> Content 3 </mat-tab>
-      </mat-tab-group>
+            
+          </form>
+        </div>
+      </div>
      </div>
     </div>
   </div>

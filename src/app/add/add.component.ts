@@ -12,6 +12,7 @@ import { HttpRequestService } from '../http-request.service';
 export class AddComponent implements OnInit {
   files: any = [];
   gender = ['male', 'female'];
+  product = ['clothing', 'jewellery', 'watch', 'shoe', 'laptop', 'mobile phone', 'baby item'];
   items: FormGroup;
   successStatus = false;
   errorStatus = false;
@@ -21,8 +22,9 @@ export class AddComponent implements OnInit {
 
   ngOnInit() {
     this.items = new FormGroup({
-      cloth: new FormControl(null),
+      name: new FormControl(null),
       gender: new FormControl('male'),
+      product: new FormControl('clothing'),
       price: new FormControl(null),
       file: new FormControl(null)
     });
@@ -46,8 +48,9 @@ export class AddComponent implements OnInit {
 
   onSubmit(){
     let formData: any = new FormData();
-    formData.append("cloth", this.items.get("cloth").value);
+    formData.append("name", this.items.get("name").value);
     formData.append("gender", this.items.get("gender").value);
+    formData.append("product", this.items.get("product").value);
     formData.append("price", this.items.get('price').value);
     formData.append('file', this.items.get('file').value);
 

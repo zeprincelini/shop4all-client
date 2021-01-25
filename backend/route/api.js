@@ -22,8 +22,8 @@ router.post('/clothes', upload, async (req, res) => {
     const date = new Date();
     try{
         let imgPath = req.file.path;
-        let query = "INSERT INTO clothes (cloth, gender, price, file, date) VALUES (?, ?, ?, ?, ?)";
-        await db.query(query, [req.body.cloth, req.body.gender, req.body.price, imgPath, date], (err, doc) => {
+        let query = "INSERT INTO products (name, gender, product, price, file, date) VALUES (?, ?, ?, ?, ?, ?)";
+        await db.query(query, [req.body.name, req.body.gender, req.body.product, req.body.price, imgPath, date], (err, doc) => {
             if(err){
                 console.log("unable to insert: ", err);
             }else{

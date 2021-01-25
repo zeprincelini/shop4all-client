@@ -28,3 +28,7 @@ li:hover{
     background-color: #3F51B5;
     color: #ffffff !important;
 }
+
+.mid{
+    min-height: 100vh !important;
+}
