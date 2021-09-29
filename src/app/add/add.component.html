@@ -40,7 +40,7 @@
             </mat-form-field>
 
               <div class="fileupload" appFileupload (onFileDrop) = "uploadFile($event)" (click) = "fileInput.click()">
-                <input hidden type="file" #fileInput #fileInput (change)="uploadFile($event.target.files)">
+                <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
               
               </div>
               <div  class="files-list" *ngFor="let file of files;let i= index">
