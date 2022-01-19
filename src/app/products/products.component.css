@@ -1,69 +1,79 @@
-.row{
-   margin-right: 0px;
-   margin-left: 0px;
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
 }
-.headline{
-    text-align:center;
-    margin-top: 30px;
-    margin-bottom: 20px;
+.headline {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
-.headline:after{
-    display: block;
-    content: " ";
-    width: 5%;
-    min-height: 5px;
-    margin: 0 auto;
-    margin-top: 10px;
-    background: #3F51B5;
+.headline:after {
+  display: block;
+  content: " ";
+  width: 5%;
+  min-height: 5px;
+  margin: 0 auto;
+  margin-top: 10px;
+  background: #3f51b5;
 }
-mat-grid-tile{
-    color: #ffffff;
+mat-grid-tile {
+  color: #ffffff;
 }
-.cloth{
-    background-image: url('../../assets/products/clothes.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.cloth {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+    url("../../assets/products/clothes.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.watch{
-    background-image: url('../../assets/products/watch.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.watch {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+    url("../../assets/products/watch.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.shoe{
-    background-image: url('../../assets/products/shoes.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.shoe {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+    url("../../assets/products/shoes.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.jewel{
-    background-image: url('../../assets/products/jewel.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.jewel {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+    url("../../assets/products/jewel.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.phone{
-    background-image: url('../../assets/products/phone.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.phone {
+  background-image: url("../../assets/products/phone.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.pc{
-    background-image: /*linear-gradient(rgb(0,0,0,0.3), rgb(0,0,0,0.3)),*/ url('../../assets/products/pc.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.pc {
+  background-image: /*linear-gradient(rgb(0,0,0,0.3), rgb(0,0,0,0.3)),*/ url("../../assets/products/pc.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.baby{
-    background-image: url('../../assets/products/baby.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.baby {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+    url("../../assets/products/baby.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-mat-grid-tile:hover{
-    cursor: pointer;
-    transform: scale(1.03);
-	opacity: 1;
+mat-grid-tile {
+  transition: 0.3s ease-in-out;
+}
+
+mat-grid-tile:hover {
+  background-color: linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3));
+  cursor: pointer;
+  transform: scale(1.03);
+  opacity: 1;
 }
