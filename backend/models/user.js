@@ -20,6 +20,10 @@ const User = db_sequelize.define("user", {
     type: Sequelize.STRING,
     allowNull: false,
   },
+  // verified: {
+  //   type: Sequelize.BOOLEAN,
+  //   defaultValue: false,
+  // },
 });
 
 module.exports = User;
