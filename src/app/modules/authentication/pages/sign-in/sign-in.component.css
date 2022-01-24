@@ -1,0 +1,8 @@
+.sing-in {
+  margin-top: 100px;
+  height: 100vh;
+}
+
+form .mat-form-field {
+  display: block;
+}

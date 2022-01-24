@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="shadow">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="top">
+              <div class="logo">
+                <h4>shop4all</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title mt-2">
+              <h4>Welcome Admin</h4>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="my-nav">
+              <ul>
+                <li
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                  routerLink="dashboard"
+                >
+                  Dashboard
+                </li>
+                <li routerLinkActive="active" routerLink="add-product">
+                  Add New
+                </li>
+                <li routerLinkActive="active" (click)="logout()">Logout</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="shadow mid">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

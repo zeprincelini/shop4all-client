@@ -1,0 +1,44 @@
+form .mat-form-field {
+  display: block;
+}
+
+form .radio {
+  display: flex;
+  flex-direction: column;
+}
+
+form .button {
+  width: 50%;
+}
+
+.fileupload {
+  width: 90%;
+  height: 150px;
+  margin: 0 auto;
+  /* background-image: url('../../assets/vector/iconfinder_icon-ios7-cloud-upload-outline_211722.svg'); */
+  background-image: url("/assets/vector/upload-gray.png");
+  background-position: center;
+  background-size: 64px 64px;
+  background-repeat: no-repeat;
+}
+/* .fileupload label{
+    position: relative;
+    top: 100px;
+    margin: 0 auto;
+    text-align: center;
+} */
+
+.fileupload:hover {
+  cursor: pointer;
+}
+
+.files-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #3f51b5;
+  padding: 5px;
+}
+.delete-file mat-icon {
+  color: #3f51b5;
+}
