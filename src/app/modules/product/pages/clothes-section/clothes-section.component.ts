@@ -9,6 +9,8 @@ import { Router, ActivatedRoute } from "@angular/router";
 export class ClothesSectionComponent implements OnInit {
   navLinks: any[];
   activeLinkIndex = -1;
+  // navLinks = ["male", "female"];
+  // activeLink = this.navLinks[0];
   constructor(private router: Router, private currentRoute: ActivatedRoute) {
     this.navLinks = [
       {

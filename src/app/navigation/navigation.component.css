@@ -1,25 +1,58 @@
-.nav{
-    display: flex;
-    justify-content: space-between;
+.nav {
+  display: flex;
+  justify-content: space-between;
 }
-.nav div span{
-    margin: 10px;
+.nav div span {
+  margin: 10px;
 }
-.mat-input-element{
-    background-color: #ffffff;
-    color: #3F51B5;
+.mat-input-element {
+  background-color: #ffffff;
+  color: #3f51b5;
 }
-a{
-    color: #ffffff;
-    font-size: 17px;
+a {
+  color: #ffffff;
+  font-size: 17px;
 }
-.cat:hover{
-    cursor: pointer;
+.cat:hover {
+  cursor: pointer;
 }
-::ng-deep .mat-form-field-infix{
-    width: 400px !important;
+/* ::ng-deep .mat-form-field-infix {
+  width: 400px !important;
+} */
+
+.mat-icon {
+  vertical-align: middle;
 }
 
-.mat-icon{
-    vertical-align: middle;
+.search {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 50%;
+  padding-left: 10px;
+  height: 35px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: inherit;
+}
+
+.search-input {
+  border: none;
+  width: inherit;
+  height: inherit;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-button:focus {
+  outline: none;
+}
+
+.search-icon {
+  color: #3f51b5;
 }
