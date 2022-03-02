@@ -13,7 +13,8 @@ a {
   color: #ffffff;
   font-size: 17px;
 }
-.cat:hover {
+.user,
+.category:hover {
   cursor: pointer;
 }
 /* ::ng-deep .mat-form-field-infix {
@@ -55,4 +56,8 @@ form {
 
 .search-icon {
   color: #3f51b5;
+}
+
+a {
+  text-decoration: none;
 }

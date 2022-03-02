@@ -9,7 +9,6 @@ import { SignUpComponent } from "../modules/authentication/pages/sign-up/sign-up
   styleUrls: ["./navigation.component.css"],
 })
 export class NavigationComponent implements OnInit {
-  open = false;
   constructor(private dialog: MatDialog) {}
 
   ngOnInit() {}
@@ -17,7 +16,16 @@ export class NavigationComponent implements OnInit {
   openSignUp() {
     this.dialog.open(SignUpComponent);
   }
+
   openSignIn() {
     this.dialog.open(SignInComponent);
+  }
+
+  search() {
+    console.log("val");
+  }
+
+  handleChange(e) {
+    console.log(e.target.value);
   }
 }

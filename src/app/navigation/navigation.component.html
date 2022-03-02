@@ -1,14 +1,13 @@
 <mat-toolbar color="primary" class="nav">
-  <div class="logo">shop4all</div>
+  <div class="logo"><mat-icon>cart</mat-icon>shop4all</div>
   <div class="search">
-    <!-- <mat-form-field>
-      <input matInput type="text" placeholder="Search" />
-      <button mat-button matSuffix mat-icon-button>
-        <mat-icon>search</mat-icon>
-      </button>
-    </mat-form-field> -->
-    <form action="">
-      <input type="search" placeholder="search" class="search-input" />
+    <form (ngSubmit)="search()">
+      <input
+        type="search"
+        placeholder="search"
+        class="search-input"
+        (change)="handleChange($event)"
+      />
       <button
         type="submit"
         class="search-button"
@@ -22,9 +21,11 @@
   </div>
   <div>
     <span><a routerLink="/">Home</a></span>
-    <span class="cat"><a [matMenuTriggerFor]="menuItems">Categories</a></span>
+    <span class="category"
+      ><a [matMenuTriggerFor]="menuItems">Categories</a></span
+    >
     <mat-menu #menuItems="matMenu">
-      <button mat-menu-item routerLink="/clothes">Clothes</button>
+      <button mat-menu-item routerLink="/product/clothes">Clothes</button>
       <button mat-menu-item>Watches</button>
       <button mat-menu-item>Jewellery</button>
       <button mat-menu-item>Pc</button>
@@ -33,7 +34,7 @@
       <button mat-menu-item>Baby Items</button>
     </mat-menu>
     <span><a routerLink="/about">About Us</a></span>
-    <span class="cat acc"
+    <span class="user"
       ><mat-icon [matMenuTriggerFor]="account">account_circle</mat-icon></span
     >
     <mat-menu #account="matMenu">
