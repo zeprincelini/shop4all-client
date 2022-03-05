@@ -14,11 +14,11 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {}
 
   openSignUp() {
-    this.dialog.open(SignUpComponent);
+    this.dialog.open(SignUpComponent, { width: "400px" });
   }
 
   openSignIn() {
-    this.dialog.open(SignInComponent);
+    this.dialog.open(SignInComponent, { width: "400px" });
   }
 
   search() {
