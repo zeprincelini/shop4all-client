@@ -1,3 +1,22 @@
-<p>
-  watch-section works!
-</p>
+<div class="wrapper">
+  <div class="row">
+    <div class="col-sm-4">
+      <nav mat-tab-nav-bar>
+        <a
+          mat-tab-link
+          *ngFor="let link of navLinks"
+          [routerLink]="link.link"
+          routerLinkActive
+          #rla="routerLinkActive"
+          [routerLinkActiveOptions]="{ exact: true }"
+          [active]="rla.isActive"
+        >
+          {{ link.label }}
+        </a>
+      </nav>
+    </div>
+    <div class="col-sm-12 section-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

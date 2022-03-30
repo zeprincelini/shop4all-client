@@ -5,23 +5,7 @@
         <div class="mat-headline headline">Week's Best</div>
       </div>
       <div class="section-body">
-        <mat-grid-list cols="4" gutterSize="10px" rowHeight="fit" style="height:400px;">
-          <mat-grid-tile>
-             <mat-card>
-           <img mat-card-image src="../../assets/main-img.jpg">
-           <mat-card-content>
-               <p>Lorem Ipsum</p>
-               <div class="rate">
-                 <p>$180</p>
-                 <p>6 rating</p>
-               </div>
-           </mat-card-content>
-           <mat-card-actions>
-             <button mat-raised-button color="warn" [style.width.%]=100>Add to cart</button>
-           </mat-card-actions>
-         </mat-card>
-          </mat-grid-tile>
-        </mat-grid-list>
+        <app-product-card [data]="data"></app-product-card>
         <div class="more">
           <button mat-button color="warn">See more</button>
         </div>

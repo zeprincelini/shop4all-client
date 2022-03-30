@@ -7,100 +7,16 @@
       <div class="section-body">
         <mat-tab-group>
           <mat-tab label="Newest Arrivals">
-            <mat-grid-list
-              cols="4"
-              gutterSize="10px"
-              rowHeight="fit"
-              style="height: 400px"
-            >
-              <mat-grid-tile *ngFor="let value of data">
-                <mat-card>
-                  <img mat-card-image src="{{ value.path }}" class="images" />
-                  <mat-card-content>
-                    <p>{{ value.title }}</p>
-                    <div class="rate">
-                      <p>{{ value.price }}</p>
-                      <p>{{ value.rating }}</p>
-                    </div>
-                  </mat-card-content>
-                  <mat-card-actions>
-                    <button mat-raised-button color="warn">Add to cart</button>
-                  </mat-card-actions>
-                </mat-card>
-              </mat-grid-tile>
-            </mat-grid-list>
+            <app-product-card [data]="data"></app-product-card>
           </mat-tab>
           <mat-tab label="Trending">
-            <mat-grid-list
-              cols="4"
-              gutterSize="10px"
-              rowHeight="fit"
-              style="height: 400px"
-            >
-              <mat-grid-tile>
-                <mat-card>
-                  <img mat-card-image src="../../assets/main-img.jpg" />
-                  <mat-card-content>
-                    <p>Lorem Ipsum</p>
-                    <div class="rate">
-                      <p>$180</p>
-                      <p>6 rating</p>
-                    </div>
-                  </mat-card-content>
-                  <mat-card-actions>
-                    <button mat-raised-button color="warn">Add to cart</button>
-                  </mat-card-actions>
-                </mat-card>
-              </mat-grid-tile>
-            </mat-grid-list>
+            <app-product-card [data]="data"></app-product-card>
           </mat-tab>
           <mat-tab label="Special Discounts">
-            <mat-grid-list
-              cols="4"
-              gutterSize="10px"
-              rowHeight="fit"
-              style="height: 400px"
-            >
-              <mat-grid-tile>
-                <mat-card>
-                  <img mat-card-image src="../../assets/main-img.jpg" />
-                  <mat-card-content>
-                    <p>Lorem Ipsum</p>
-                    <div class="rate">
-                      <p>$180</p>
-                      <p>6 rating</p>
-                    </div>
-                  </mat-card-content>
-                  <mat-card-actions>
-                    <button mat-raised-button color="warn">Add to cart</button>
-                  </mat-card-actions>
-                </mat-card>
-              </mat-grid-tile>
-            </mat-grid-list>
+            <app-product-card [data]="data"></app-product-card>
           </mat-tab>
           <mat-tab label="Top Rated">
-            <mat-grid-list
-              cols="4"
-              gutterSize="10px"
-              rowHeight="fit"
-              style="height: 400px"
-            >
-              <mat-grid-tile>
-                <mat-card>
-                  <img mat-card-image src="../../assets/products/jewel.png" />
-                  <mat-card-content>
-                    <p>Lorem Ipsum</p>
-                    <div class="rate">
-                      <p>$180</p>
-                      <p>6 rating</p>
-                    </div>
-                  </mat-card-content>
-                  <mat-card-actions>
-                    <button mat-raised-button color="warn">Add to cart</button>
-                  </mat-card-actions>
-                </mat-card>
-              </mat-grid-tile>
-            </mat-grid-list>
+            <app-product-card [data]="data"></app-product-card>
           </mat-tab>
         </mat-tab-group>
       </div>

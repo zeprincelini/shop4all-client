@@ -4,38 +4,8 @@
       <mat-spinner></mat-spinner>
     </div>
     <ng-template #content>
-      <div *ngIf="data.length > 0; else empty">
-        <!-- :todo make mat-grid-list a reusable component -->
-        <mat-grid-list
-          cols="4"
-          gutterSize="10px"
-          rowHeight="400px"
-          style="height: 400px"
-        >
-          <mat-grid-tile *ngFor="let val of data">
-            <mat-card>
-              <img mat-card-image src="{{ val.image }}" class="images" />
-              <mat-card-content>
-                <p>
-                  {{
-                    val.title.length > 20
-                      ? val.title.substr(0, 20) + "..."
-                      : val.title
-                  }}
-                </p>
-                <div class="rate d-flex justify-content-between">
-                  <p>${{ val.price }}</p>
-                  <p>{{ val.rating?.rate }}</p>
-                </div>
-              </mat-card-content>
-              <mat-card-actions>
-                <button mat-raised-button color="warn" [style.width.%]="100">
-                  Buy now
-                </button>
-              </mat-card-actions>
-            </mat-card>
-          </mat-grid-tile>
-        </mat-grid-list>
+      <div *ngIf="products.length > 0; else empty">
+        <app-product-card [data]="products"></app-product-card>
       </div>
       <ng-template #empty>
         <div class="empty">no products</div>

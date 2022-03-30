@@ -8,7 +8,7 @@ import { MatSnackBar } from "@angular/material/snack-bar";
   styleUrls: ["./cloth-male.component.css"],
 })
 export class ClothMaleComponent implements OnInit {
-  data = [];
+  products = [];
   loading = false;
   constructor(
     private httpRequest: HttpRequestService,
@@ -20,7 +20,7 @@ export class ClothMaleComponent implements OnInit {
     this.httpRequest.getProducts().subscribe(
       (res: any) => {
         this.loading = false;
-        this.data = res;
+        this.products = res;
       },
       (err) => {
         this.loading = false;

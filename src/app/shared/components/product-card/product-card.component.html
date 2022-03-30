@@ -1,0 +1,28 @@
+<mat-grid-list
+  cols="4"
+  gutterSize="10px"
+  rowHeight="400px"
+  style="height: 400px"
+>
+  <mat-grid-tile *ngFor="let val of data">
+    <mat-card>
+      <img mat-card-image src="{{ val.image }}" class="images" />
+      <mat-card-content>
+        <p>
+          {{
+            val.title.length > 20 ? val.title.substr(0, 20) + "..." : val.title
+          }}
+        </p>
+        <div class="rate d-flex justify-content-between">
+          <p>${{ val.price }}</p>
+          <p>{{ val.rating?.rate }}</p>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="warn" [style.width.%]="100">
+          Buy now
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

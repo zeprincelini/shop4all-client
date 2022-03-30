@@ -1,0 +1,25 @@
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+::ng-deep .mat-progress-spinner {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+::ng-deep .mat-progress-spinner circle,
+.mat-spinner circle {
+  stroke: #f24236;
+}
+
+::ng-deep .mat-progress-spinner svg {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.empty {
+  color: gray;
+}
