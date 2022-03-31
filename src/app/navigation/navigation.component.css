@@ -30,7 +30,7 @@ a {
   border-radius: 8px;
   width: 50%;
   padding-left: 10px;
-  height: 35px;
+  height: 30px;
 }
 
 form {
@@ -44,6 +44,8 @@ form {
   border: none;
   width: inherit;
   height: inherit;
+  color: gray;
+  font-size: 14px;
 }
 
 .search-input:focus {

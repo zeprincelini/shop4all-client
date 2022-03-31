@@ -20,6 +20,9 @@ import { WatchSectionComponent } from "./pages/watch-section/watch-section.compo
 import { BabyFemaleComponent } from "./components/baby/baby-female/baby-female.component";
 import { BabyMaleComponent } from "./components/baby/baby-male/baby-male.component";
 import { BabySectionComponent } from "./pages/baby-section/baby-section.component";
+import { ViewProductComponent } from "./pages/view-product/view-product.component";
+import { PhonesSectionComponent } from "./pages/phones-section/phones-section.component";
+import { PcSectionComponent } from "./pages/pc-section/pc-section.component";
 
 @NgModule({
   declarations: [
@@ -39,6 +42,9 @@ import { BabySectionComponent } from "./pages/baby-section/baby-section.componen
     BabyFemaleComponent,
     BabyMaleComponent,
     BabySectionComponent,
+    ViewProductComponent,
+    PhonesSectionComponent,
+    PcSectionComponent,
   ],
   imports: [CommonModule, MaterialModule, ProductRoutingModule, SharedModule],
 })

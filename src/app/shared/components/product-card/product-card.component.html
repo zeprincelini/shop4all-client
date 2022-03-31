@@ -5,7 +5,7 @@
   style="height: 400px"
 >
   <mat-grid-tile *ngFor="let val of data">
-    <mat-card>
+    <mat-card [routerLink]="['product', val.id]" style="cursor: pointer">
       <img mat-card-image src="{{ val.image }}" class="images" />
       <mat-card-content>
         <p>
@@ -20,7 +20,7 @@
       </mat-card-content>
       <mat-card-actions>
         <button mat-raised-button color="warn" [style.width.%]="100">
-          Buy now
+          Add to cart
         </button>
       </mat-card-actions>
     </mat-card>

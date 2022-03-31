@@ -17,7 +17,7 @@ import { FooterComponent } from "./footer/footer.component";
 import { WeekComponent } from "./week/week.component";
 import { CarouselComponent } from "./carousel/carousel.component";
 import { MainContentComponent } from "./main-content/main-content.component";
-import { HttpRequestService } from "./shared/http-request.service";
+import { HttpRequestService } from "./shared/service/product-service/http-request.service";
 
 @NgModule({
   declarations: [

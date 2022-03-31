@@ -18,6 +18,7 @@ import { BabySectionComponent } from "./pages/baby-section/baby-section.componen
 import { BabyMaleComponent } from "./components/baby/baby-male/baby-male.component";
 import { BabyFemaleComponent } from "./components/baby/baby-female/baby-female.component";
 import { PhonesSectionComponent } from "./pages/phones-section/phones-section.component";
+import { ViewProductComponent } from "./pages/view-product/view-product.component";
 
 const routes: Routes = [
   {
@@ -73,6 +74,10 @@ const routes: Routes = [
         component: PhonesSectionComponent,
       },
     ],
+  },
+  {
+    path: ":id",
+    component: ViewProductComponent,
   },
 ];
 

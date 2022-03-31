@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { HttpRequestService } from "src/app/shared/http-request.service";
+import { HttpRequestService } from "src/app/shared/service/product-service/http-request.service";
 import { MatSnackBar } from "@angular/material/snack-bar";
 
 @Component({

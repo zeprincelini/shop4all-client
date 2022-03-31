@@ -1,6 +1,6 @@
 import { Component, HostBinding, OnInit } from "@angular/core";
 import { FormControl, FormGroup, NgForm } from "@angular/forms";
-import { HttpRequestService } from "src/app/shared/http-request.service";
+import { HttpRequestService } from "src/app/shared/service/product-service/http-request.service";
 // import {MatSnackBar} from '@angular/material/snack-bar';
 // import { HttpClient } from '@angular/common/http';
 
