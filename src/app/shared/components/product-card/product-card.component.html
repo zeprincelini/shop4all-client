@@ -1,0 +1,21 @@
+<mat-card [routerLink]="['product', data.id]" style="cursor: pointer">
+  <img mat-card-image src="{{ data.image }}" class="images" />
+  <mat-card-content>
+    <p>
+      {{
+        data.title.length > 20
+          ? data.title.substr(0, 20) + "&hellip;"
+          : data.title
+      }}
+    </p>
+    <div class="rate d-flex justify-content-between">
+      <p>${{ data.price }}</p>
+      <p>{{ data.rating?.rate }}</p>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="warn" [style.width.%]="100">
+      Add to cart
+    </button>
+  </mat-card-actions>
+</mat-card>

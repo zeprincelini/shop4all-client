@@ -5,24 +5,6 @@
   style="height: 400px"
 >
   <mat-grid-tile *ngFor="let val of data">
-    <mat-card [routerLink]="['product', val.id]" style="cursor: pointer">
-      <img mat-card-image src="{{ val.image }}" class="images" />
-      <mat-card-content>
-        <p>
-          {{
-            val.title.length > 20 ? val.title.substr(0, 20) + "..." : val.title
-          }}
-        </p>
-        <div class="rate d-flex justify-content-between">
-          <p>${{ val.price }}</p>
-          <p>{{ val.rating?.rate }}</p>
-        </div>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button color="warn" [style.width.%]="100">
-          Add to cart
-        </button>
-      </mat-card-actions>
-    </mat-card>
+    <app-product-card [data]="val"></app-product-card>
   </mat-grid-tile>
 </mat-grid-list>
