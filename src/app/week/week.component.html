@@ -6,7 +6,7 @@
       </div>
       <div class="section-body">
         <ng-container *ngIf="isMobile; else desktop">
-          <app-carousel-slide>
+          <app-carousel-slide [showIndicator]="false">
             <ng-container *ngFor="let grid of data; let i = index">
               <div class="carousel-item" [ngClass]="i === 0 ? 'active' : ''">
                 <app-product-card [data]="grid"></app-product-card>

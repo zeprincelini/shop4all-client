@@ -23,6 +23,7 @@ import { BabySectionComponent } from "./pages/baby-section/baby-section.componen
 import { ViewProductComponent } from "./pages/view-product/view-product.component";
 import { PhonesSectionComponent } from "./pages/phones-section/phones-section.component";
 import { PcSectionComponent } from "./pages/pc-section/pc-section.component";
+import { ProductNavTabComponent } from './components/product-nav-tab/product-nav-tab.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { PcSectionComponent } from "./pages/pc-section/pc-section.component";
     ViewProductComponent,
     PhonesSectionComponent,
     PcSectionComponent,
+    ProductNavTabComponent,
   ],
   imports: [CommonModule, MaterialModule, ProductRoutingModule, SharedModule],
 })

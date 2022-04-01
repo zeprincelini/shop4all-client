@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
+import { BreakpointObserver } from "@angular/cdk/layout";
 
 @Component({
   selector: "app-product-card-grid",
@@ -7,7 +8,12 @@ import { Component, Input, OnInit } from "@angular/core";
 })
 export class ProductCardGridComponent implements OnInit {
   @Input() data: any;
-  constructor() {}
+  isMobile: boolean = false;
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.breakpointObserver.observe(["(max-width: 768px)"]).subscribe((res) => {
+      this.isMobile = res.matches;
+    });
+  }
 }

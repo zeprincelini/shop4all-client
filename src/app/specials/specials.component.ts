@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { BreakpointObserver } from "@angular/cdk/layout";
 
 @Component({
   selector: "app-specials",
@@ -6,6 +7,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./specials.component.css"],
 })
 export class SpecialsComponent implements OnInit {
+  isMobile: boolean = false;
   data = [
     {
       id: 1,
@@ -61,7 +63,11 @@ export class SpecialsComponent implements OnInit {
       },
     },
   ];
-  constructor() {}
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.breakpointObserver.observe(["(max-width: 768px)"]).subscribe((res) => {
+      this.isMobile = res.matches;
+    });
+  }
 }

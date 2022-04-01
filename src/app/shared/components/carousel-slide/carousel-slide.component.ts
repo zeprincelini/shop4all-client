@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-carousel-slide",
@@ -6,6 +6,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./carousel-slide.component.css"],
 })
 export class CarouselSlideComponent implements OnInit {
+  @Input() showIndicator: boolean = true;
   constructor() {}
 
   ngOnInit(): void {}
