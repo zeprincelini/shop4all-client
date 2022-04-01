@@ -1,5 +1,11 @@
-    <app-carousel></app-carousel>
-    <app-products></app-products>
-    <app-specials></app-specials>
-    <app-newsletter></app-newsletter>
-    <app-week></app-week>
+<app-carousel-slide>
+  <ng-container *ngFor="let items of data; let key = index">
+    <div class="carousel-item" [ngClass]="key === 0 ? 'active' : ''">
+      <img src="{{ items }}" alt="slide content" class="d-block w-100" />
+    </div>
+  </ng-container>
+</app-carousel-slide>
+<app-products></app-products>
+<app-specials></app-specials>
+<app-newsletter></app-newsletter>
+<app-week></app-week>

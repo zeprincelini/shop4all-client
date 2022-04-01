@@ -6,7 +6,7 @@
       </div>
       <ng-template #content>
         <div *ngIf="products.length > 0; else empty">
-          <app-product-card [data]="products"></app-product-card>
+          <app-product-card-grid [data]="products"></app-product-card-grid>
         </div>
         <ng-template #empty>
           <div class="empty">no products</div>

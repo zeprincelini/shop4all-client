@@ -11,25 +11,53 @@
           style="height: 100vh"
           gutterSize="10px"
         >
-          <mat-grid-tile colspan="3" class="cloth" routerLink="/product/clothes"
+          <mat-grid-tile
+            [colspan]="isMobile ? 4 : 3"
+            [rowspan]="isMobile ? 4 : 1"
+            class="cloth"
+            routerLink="/product/clothes"
             >clothes</mat-grid-tile
           >
-          <mat-grid-tile class="watch" routerLink="product/watches"
+          <mat-grid-tile
+            class="watch"
+            [colspan]="isMobile ? 4 : 1"
+            [rowspan]="isMobile ? 4 : 1"
+            routerLink="product/watches"
             >watches</mat-grid-tile
           >
-          <mat-grid-tile class="phone" rowspan="2" routerLink="product/phones"
+          <mat-grid-tile
+            class="phone"
+            [colspan]="isMobile ? 4 : 1"
+            [rowspan]="isMobile ? 4 : 2"
+            routerLink="product/phones"
             >mobile phones</mat-grid-tile
           >
-          <mat-grid-tile class="jewel" routerLink="product/jewelleries"
+          <mat-grid-tile
+            class="jewel"
+            [colspan]="isMobile ? 4 : 1"
+            [rowspan]="isMobile ? 4 : 1"
+            routerLink="product/jewelleries"
             >jewellery</mat-grid-tile
           >
-          <mat-grid-tile class="shoe" routerLink="product/shoes"
+          <mat-grid-tile
+            class="shoe"
+            [colspan]="isMobile ? 4 : 1"
+            [rowspan]="isMobile ? 4 : 1"
+            routerLink="product/shoes"
             >shoes</mat-grid-tile
           >
-          <mat-grid-tile class="pc" rowspan="2" routerLink="product/pc"
+          <mat-grid-tile
+            class="pc"
+            [colspan]="isMobile ? 4 : 1"
+            [rowspan]="isMobile ? 4 : 2"
+            routerLink="product/pc"
             >laptops</mat-grid-tile
           >
-          <mat-grid-tile class="baby" colspan="2" routerLink="product/babies"
+          <mat-grid-tile
+            class="baby"
+            [colspan]="isMobile ? 4 : 2"
+            [rowspan]="isMobile ? 4 : 1"
+            routerLink="product/babies"
             >baby items</mat-grid-tile
           >
         </mat-grid-list>

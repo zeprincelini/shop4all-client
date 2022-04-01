@@ -5,7 +5,14 @@
         <div class="mat-headline headline">Week's Best</div>
       </div>
       <div class="section-body">
-        <app-product-card [data]="data"></app-product-card>
+        <ng-container *ngIf="isMobile; else desktop">
+          <!-- <app-carousel-slide>
+            <app-product-card></app-product-card>
+          </app-carousel-slide> -->
+        </ng-container>
+        <ng-template #desktop>
+          <app-product-card-grid [data]="data"></app-product-card-grid>
+        </ng-template>
         <div class="more">
           <button mat-button color="warn">See more</button>
         </div>

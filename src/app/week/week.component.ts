@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { BreakpointObserver } from "@angular/cdk/layout";
 
 @Component({
   selector: "app-week",
@@ -6,6 +7,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./week.component.css"],
 })
 export class WeekComponent implements OnInit {
+  isMobile: boolean = false;
   data = [
     {
       id: 17,
@@ -60,7 +62,11 @@ export class WeekComponent implements OnInit {
       },
     },
   ];
-  constructor() {}
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.breakpointObserver.observe(["(max-width: 768px)"]).subscribe((res) => {
+      this.isMobile = res.matches;
+    });
+  }
 }

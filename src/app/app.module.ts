@@ -15,7 +15,6 @@ import { SpecialsComponent } from "./specials/specials.component";
 import { NewsletterComponent } from "./newsletter/newsletter.component";
 import { FooterComponent } from "./footer/footer.component";
 import { WeekComponent } from "./week/week.component";
-import { CarouselComponent } from "./carousel/carousel.component";
 import { MainContentComponent } from "./main-content/main-content.component";
 import { HttpRequestService } from "./shared/service/product-service/http-request.service";
 
@@ -29,7 +28,6 @@ import { HttpRequestService } from "./shared/service/product-service/http-reques
     NewsletterComponent,
     FooterComponent,
     WeekComponent,
-    CarouselComponent,
     MainContentComponent,
   ],
   imports: [

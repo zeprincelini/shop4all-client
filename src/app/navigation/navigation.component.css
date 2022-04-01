@@ -63,3 +63,18 @@ form {
 a {
   text-decoration: none;
 }
+
+/*media query*/
+
+@media (max-width: 768px) {
+  .nav {
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .search {
+    width: 90%;
+  }
+  .nav-desktop {
+    display: none;
+  }
+}
