@@ -3,7 +3,40 @@
     <mat-spinner></mat-spinner>
   </div>
   <ng-template #content>
-    <div *ngIf="product; else empty"></div>
+    <div *ngIf="product; else empty">
+      <div class="product-wrapper">
+        <div class="product-img">
+          <div class="product-img-lg">
+            <img [src]="data.image" alt="product image" />
+          </div>
+          <div class="product-img-sm" *ngFor="let img of mini_img">
+            <div class="sm-img">
+              <img src="" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="product-details">
+          <div class="product-title">
+            <h2>{{ product.title }}</h2>
+          </div>
+          <div class="product-add-fav-share">
+            <div class="fav">fav</div>
+            <div class="share">share</div>
+          </div>
+          <div class="product-price">
+            <h4>${{ product.price }}</h4>
+          </div>
+          <div class="product-actions">
+            <button class="btn-cart" mat-raised-button color="primary">
+              Add to cart
+            </button>
+            <button class="btn-buy" mat-raised-button color="warn">
+              Buy now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <ng-template #empty>
       <div class="empty">product unavailable</div>
     </ng-template>

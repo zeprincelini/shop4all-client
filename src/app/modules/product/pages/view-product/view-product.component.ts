@@ -12,6 +12,7 @@ export class ViewProductComponent implements OnInit {
   productId: string;
   product: {};
   loading = false;
+  mini_img = [];
   constructor(
     private httpRequestService: HttpRequestService,
     private activatedRoute: ActivatedRoute,
