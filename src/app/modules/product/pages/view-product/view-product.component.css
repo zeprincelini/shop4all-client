@@ -33,6 +33,7 @@
   width: 100%;
   display: flex;
   gap: 20px;
+  padding: 10px;
 }
 
 .product-img {
@@ -102,5 +103,11 @@
   100% {
     transform: scale(1);
     margin-left: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-wrapper {
+    flex-direction: column;
   }
 }
