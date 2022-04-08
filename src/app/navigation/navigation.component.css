@@ -1,3 +1,9 @@
+.logo {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;

@@ -1,4 +1,4 @@
-<app-carousel-slide>
+<app-carousel-slide [carouselClass]="carousel">
   <ng-container *ngFor="let items of data; let key = index">
     <div class="carousel-item" [ngClass]="key === 0 ? 'active' : ''">
       <img src="{{ items }}" alt="slide content" class="d-block w-100" />

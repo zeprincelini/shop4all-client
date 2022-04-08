@@ -8,12 +8,7 @@ import { BreakpointObserver } from "@angular/cdk/layout";
 })
 export class WeekComponent implements OnInit {
   isMobile: boolean = false;
-  datus = [
-    {
-      mi: "ss",
-      so: "ll",
-    },
-  ];
+  carousel = "carouselThree";
   data = [
     {
       id: 17,

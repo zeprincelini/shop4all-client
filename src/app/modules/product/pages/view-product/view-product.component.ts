@@ -12,7 +12,12 @@ export class ViewProductComponent implements OnInit {
   productId: string;
   product: {};
   loading = false;
-  mini_img = [];
+  mini_img = [
+    "assets/products/watch.png",
+    "assets/products/nike.jpg",
+    "assets/products/bag.jpg",
+  ];
+  like: boolean = false;
   constructor(
     private httpRequestService: HttpRequestService,
     private activatedRoute: ActivatedRoute,
@@ -37,5 +42,8 @@ export class ViewProductComponent implements OnInit {
         });
       }
     );
+  };
+  onFav = () => {
+    this.like = !this.like;
   };
 }

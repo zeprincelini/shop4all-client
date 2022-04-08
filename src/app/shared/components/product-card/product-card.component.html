@@ -1,4 +1,4 @@
-<mat-card [routerLink]="['product', data.id]" style="cursor: pointer">
+<mat-card [routerLink]="['/product', data.id]" style="cursor: pointer">
   <div class="w-100 text-center" *ngIf="isMobile; else default">
     <img mat-card-image src="{{ data.image }}" class="images" />
   </div>

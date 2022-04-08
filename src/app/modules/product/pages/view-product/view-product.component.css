@@ -39,7 +39,7 @@
 .product-img {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 30px;
   flex: 1;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .sm-img img {
-  object-fit: contain;
+  object-fit: cover;
   max-width: 100%;
   height: 100%;
 }
@@ -80,16 +80,33 @@
   align-items: center;
   gap: 13px;
   color: gray;
-  margin-top: 7px;
+  margin: 12px 0px;
+}
+
+.fav {
+  cursor: pointer;
+}
+
+.share {
+  cursor: pointer;
 }
 
 .product-actions {
   display: flex;
   gap: 6px;
+  margin-top: 22px;
 }
 
 .btn-buy {
   animation: bop 0.8s ease-in-out 1s 2;
+}
+
+.product-rating {
+  margin-top: 10px;
+}
+
+.desc {
+  margin-top: 12px;
 }
 
 @keyframes bop {

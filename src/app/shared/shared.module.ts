@@ -6,6 +6,8 @@ import { ProductCardGridComponent } from "./components/product-card-grid/product
 import { RouterModule } from "@angular/router";
 import { CarouselSlideComponent } from "./components/carousel-slide/carousel-slide.component";
 import { ProductCardComponent } from "./components/product-card/product-card.component";
+import { RatingModule } from "ng-starrating";
+import { RatingComponent } from "./components/rating/rating.component";
 
 @NgModule({
   declarations: [
@@ -13,14 +15,16 @@ import { ProductCardComponent } from "./components/product-card/product-card.com
     ProductCardGridComponent,
     CarouselSlideComponent,
     ProductCardComponent,
+    RatingComponent,
   ],
-  imports: [CommonModule, MaterialModule, RouterModule],
+  imports: [CommonModule, MaterialModule, RouterModule, RatingModule],
   exports: [
     CommonModule,
     FileuploadDirective,
     ProductCardGridComponent,
     CarouselSlideComponent,
     ProductCardComponent,
+    RatingComponent,
   ],
 })
 export class SharedModule {}

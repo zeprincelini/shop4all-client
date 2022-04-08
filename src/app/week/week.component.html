@@ -2,11 +2,14 @@
   <div class="col-sm-12">
     <div class="weekly-section">
       <div class="section-header">
-        <div class="mat-headline headline">Week's Best</div>
+        <div class="mat-headline headline">Week&apos;s Best</div>
       </div>
       <div class="section-body">
         <ng-container *ngIf="isMobile; else desktop">
-          <app-carousel-slide [showIndicator]="false">
+          <app-carousel-slide
+            [showIndicator]="false"
+            [carouselClass]="carousel"
+          >
             <ng-container *ngFor="let grid of data; let i = index">
               <div class="carousel-item" [ngClass]="i === 0 ? 'active' : ''">
                 <app-product-card [data]="grid"></app-product-card>

@@ -1,15 +1,19 @@
-<div id="carousel-wrapper" class="carousel slide" data-ride="carousel">
+<div id="{{ carouselClass }}" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators" *ngIf="showIndicator">
-    <li data-target="#carousel-wrapper" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-wrapper" data-slide-to="1"></li>
-    <li data-target="#carousel-wrapper" data-slide-to="2"></li>
+    <li
+      data-target="#{{ carouselClass }}"
+      data-slide-to="0"
+      class="active"
+    ></li>
+    <li data-target="#{{ carouselClass }}" data-slide-to="1"></li>
+    <li data-target="#{{ carouselClass }}" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner">
     <ng-content></ng-content>
   </div>
   <a
     class="carousel-control-prev"
-    href="#carousel-wrapper"
+    href="#{{ carouselClass }}"
     role="button"
     data-slide="prev"
   >
@@ -18,7 +22,7 @@
   </a>
   <a
     class="carousel-control-next"
-    href="#carousel-wrapper"
+    href="#{{ carouselClass }}"
     role="button"
     data-slide="next"
   >

@@ -8,7 +8,10 @@
         <mat-tab-group>
           <mat-tab label="Newest Arrivals">
             <ng-container *ngIf="isMobile; else grid">
-              <app-carousel-slide [showIndicator]="false">
+              <app-carousel-slide
+                [showIndicator]="false"
+                [carouselClass]="carousel_one"
+              >
                 <ng-container *ngFor="let grid of data; let i = index">
                   <div
                     class="carousel-item"
@@ -25,7 +28,10 @@
           </mat-tab>
           <mat-tab label="Trending">
             <ng-container *ngIf="isMobile; else grid">
-              <app-carousel-slide [showIndicator]="false">
+              <app-carousel-slide
+                [showIndicator]="false"
+                [carouselClass]="carousel_two"
+              >
                 <ng-container *ngFor="let grid of data; let i = index">
                   <div
                     class="carousel-item"
@@ -42,7 +48,10 @@
           </mat-tab>
           <mat-tab label="Special Discounts">
             <ng-container *ngIf="isMobile; else grid">
-              <app-carousel-slide [showIndicator]="false">
+              <app-carousel-slide
+                [showIndicator]="false"
+                [carouselClass]="carousel_three"
+              >
                 <ng-container *ngFor="let grid of data; let i = index">
                   <div
                     class="carousel-item"
@@ -59,7 +68,10 @@
           </mat-tab>
           <mat-tab label="Top Rated">
             <ng-container *ngIf="isMobile; else grid">
-              <app-carousel-slide [showIndicator]="false">
+              <app-carousel-slide
+                [showIndicator]="false"
+                [carouselClass]="carousel_four"
+              >
                 <ng-container *ngFor="let grid of data; let i = index">
                   <div
                     class="carousel-item"

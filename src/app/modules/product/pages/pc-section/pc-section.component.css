@@ -2,6 +2,11 @@
   min-height: calc(100vh - 155px);
 }
 
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .spinner {
   display: flex;
   align-items: center;

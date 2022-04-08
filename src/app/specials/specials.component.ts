@@ -8,6 +8,10 @@ import { BreakpointObserver } from "@angular/cdk/layout";
 })
 export class SpecialsComponent implements OnInit {
   isMobile: boolean = false;
+  carousel_one = "newest";
+  carousel_two = "trending";
+  carousel_three = "discount";
+  carousel_four = "rated";
   data = [
     {
       id: 1,

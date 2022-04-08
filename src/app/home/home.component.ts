@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
     "/assets/carousel/2.jpg",
     "/assets/carousel/3.jpg",
   ];
+  carousel = "carouselOne";
   constructor() {}
 
   ngOnInit() {}

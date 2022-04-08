@@ -1,5 +1,13 @@
 <mat-toolbar color="primary" class="nav">
-  <div class="logo"><mat-icon>cart</mat-icon>shop4all</div>
+  <div class="logo" routerLink="/">
+    <img
+      src="assets/vector/logo.png"
+      alt="logo"
+      width="150px"
+      height="auto"
+      class="logo"
+    />
+  </div>
   <div class="search">
     <form (ngSubmit)="search()">
       <input

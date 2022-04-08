@@ -7,11 +7,11 @@
       <div class="product-wrapper">
         <div class="product-img">
           <div class="product-img-lg text-center">
-            <img [src]="product.image" alt="product image" />
+            <img [src]="product.image" alt="product-image" />
           </div>
-          <div class="product-img-sm" *ngFor="let img of mini_img">
-            <div class="sm-img">
-              <img src="" alt="" />
+          <div class="product-img-sm">
+            <div class="sm-img" *ngFor="let img of mini_img">
+              <img src="{{ img }}" alt="carousel" />
             </div>
           </div>
         </div>
@@ -20,11 +20,22 @@
             <h2>{{ product.title }}</h2>
           </div>
           <div class="product-add-fav-share">
-            <div class="fav">fav</div>
-            <div class="share">share</div>
+            <div class="fav" (click)="onFav()">
+              <div *ngIf="like; else dislike">
+                <mat-icon class="fav-icon" color="warn">favorite</mat-icon>
+              </div>
+              <ng-template #dislike>
+                <mat-icon class="unfav-icon" color="warn"
+                  >favorite_border</mat-icon
+                >
+              </ng-template>
+            </div>
+            <div class="share">
+              <mat-icon>share</mat-icon>
+            </div>
           </div>
           <div class="product-price">
-            <h4>${{ product.price }}</h4>
+            <h4 style="font-weight: bold">${{ product.price }}</h4>
           </div>
           <div class="product-actions">
             <button class="btn-cart" mat-raised-button color="primary">
@@ -33,6 +44,13 @@
             <button class="btn-buy" mat-raised-button color="warn">
               Buy now
             </button>
+          </div>
+          <div class="product-rating">
+            <app-rating [rating]="product.rating.rate"></app-rating>
+          </div>
+          <div class="product-description">
+            <h3 class="desc">Description</h3>
+            <p>{{ product.description }}</p>
           </div>
         </div>
       </div>
