@@ -1,7 +1,34 @@
+.menu {
+  display: none;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  background: #ffffff;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 60px 5px 5px 5px;
+  transition: 0.35s ease-in-out;
+}
+
+.mobile-menu a {
+  color: gray;
+}
+
 .logo {
   max-width: 100%;
   height: auto;
   cursor: pointer;
+  width: 150px;
 }
 
 .nav {
@@ -76,9 +103,25 @@ a {
   .nav {
     flex-wrap: nowrap;
     gap: 10px;
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 10px;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .logo {
+    width: 110px;
+  }
+
+  .mat-toolbar-row,
+  .mat-toolbar-single-row {
+    align-items: flex-start;
   }
   .search {
-    width: 90%;
+    width: 100%;
   }
   .nav-desktop {
     display: none;

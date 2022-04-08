@@ -1,12 +1,14 @@
 <mat-toolbar color="primary" class="nav">
+  <div class="menu">
+    <ng-container *ngIf="open; else close">
+      <mat-icon (click)="toggle()">menu</mat-icon>
+    </ng-container>
+    <ng-template #close>
+      <mat-icon (click)="toggle()">close</mat-icon>
+    </ng-template>
+  </div>
   <div class="logo" routerLink="/">
-    <img
-      src="assets/vector/logo.png"
-      alt="logo"
-      width="150px"
-      height="auto"
-      class="logo"
-    />
+    <img src="assets/vector/logo.png" alt="logo" class="logo" />
   </div>
   <div class="search">
     <form (ngSubmit)="search()">
@@ -51,3 +53,26 @@
     </mat-menu>
   </div>
 </mat-toolbar>
+
+<div
+  class="mobile-menu"
+  [ngStyle]="{ transform: !open ? 'translateX(0)' : 'translateX(-300px)' }"
+>
+  <span><a routerLink="/">Home</a></span>
+  <span class="category"
+    ><a [matMenuTriggerFor]="menuItems">Categories</a></span
+  >
+  <mat-menu #menuItems="matMenu">
+    <button mat-menu-item routerLink="/product/clothes">Clothes</button>
+    <button mat-menu-item routerLink="/product/watches">Watches</button>
+    <button mat-menu-item routerLink="/product/jewelleries">Jewellery</button>
+    <button mat-menu-item routerLink="/product/pc">Pc</button>
+    <button mat-menu-item routerLink="/product/phones">Phones</button>
+    <button mat-menu-item routerLink="/product/shoes">Shoes</button>
+    <button mat-menu-item routerLink="/product/babies">Baby Items</button>
+  </mat-menu>
+  <!-- <span><a routerLink="/about">About Us</a></span> -->
+  <mat-divider></mat-divider>
+  <span style="color: #3f51b5" (click)="openSignUp()">Sign Up</span>
+  <span style="color: #3f51b5" (click)="openSignIn()">Sign In</span>
+</div>
