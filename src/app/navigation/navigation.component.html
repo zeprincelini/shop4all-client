@@ -11,9 +11,10 @@
     <img src="assets/vector/logo.png" alt="logo" class="logo" />
   </div>
   <div class="search">
-    <form (ngSubmit)="search()">
+    <form>
       <input
         type="search"
+        (click)="search()"
         placeholder="search"
         class="search-input"
         (change)="handleChange($event)"

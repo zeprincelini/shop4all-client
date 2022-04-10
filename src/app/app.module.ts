@@ -17,6 +17,7 @@ import { FooterComponent } from "./footer/footer.component";
 import { WeekComponent } from "./week/week.component";
 import { MainContentComponent } from "./main-content/main-content.component";
 import { HttpRequestService } from "./shared/service/product-service/http-request.service";
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HttpRequestService } from "./shared/service/product-service/http-reques
     FooterComponent,
     WeekComponent,
     MainContentComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
